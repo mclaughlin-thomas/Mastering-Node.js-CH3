@@ -1,0 +1,5 @@
+nodemon manages & executes js
+tsc-watc1h does same thing but for ts
+
+
+
