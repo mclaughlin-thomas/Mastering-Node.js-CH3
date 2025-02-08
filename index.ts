@@ -16,6 +16,13 @@ function writeValue2(val?: string) {
 }
 writeValue2("London");
 writeValue2();
+// Here the funciton can be invoked with zero or one argument
+// Here the parameter type is string or undefined  (string | undefined) because the value will be undefined
+// if the function is invoked w/o an argument.
+
+// val?: string NOT SAME AS val: string | undefined
+// latter requires an argument, first does not
+
 
 
 // let count: number | undefined | null = 100;
