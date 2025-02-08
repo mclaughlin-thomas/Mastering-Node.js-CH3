@@ -16,6 +16,19 @@ function writeValue2(val) {
 }
 writeValue2("London");
 writeValue2();
+// Here the funciton can be invoked with zero or one argument
+// Here the parameter type is string or undefined  (string | undefined) because the value will be undefined
+// if the function is invoked w/o an argument.
+// val?: string NOT SAME AS val: string | undefined
+// latter requires an argument, first does not
+// default values can be helpful when dealing with undefined values
+//default value will be used when fcn is invoked w/o an argument
+// this means that the type of the param in the example will always be string, so I dont have to check for undefined values
+function writeValue3(val = "default value") {
+    console.log(`Value: ${val}`);
+}
+writeValue3("London");
+writeValue3();
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {
 //     let result1: string = count.toFixed(2);
