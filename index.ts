@@ -5,6 +5,9 @@
 let place2: string | undefined | null;
 console.log(`Place Value: ${place2} Type: ${typeof(place2)}`)
 
+// null and undefined have no features like properties or methods
+let person3 = "alice"; // assumed to be string
+let person4: string | undefined = "bobby"; // can be undefined but not null as it was not included in type union
 
 
 
