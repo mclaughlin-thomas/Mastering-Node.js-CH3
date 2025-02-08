@@ -3,12 +3,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // using the null coalescing operator
 // allows for fallback value to be used in place of null or undefined
 let val1;
-let val2 = "London";
+let val2 = "London"; // can be either string or undefined. If not undefined, it will equal "london"
 let coalesced1 = val1 || "fallback value"; //  righthand side returned because it is undefined
 let coalesced2 = val2 || "fallback value"; //  lefthand side returned because it has been asssigned a string
 console.log(`result 1: ${coalesced1}`);
 console.log(`result 2: ${coalesced2}`);
 console.log(`${typeof coalesced2}`); // outputs string
+//can produce unexpected results
+let val3 = 0;
+let coalesced3 = val3 || 100; // chooses right side because 0 evaluatres as falsy like undefined or null
+console.log(`result 3: ${coalesced3}`);
+console.log(`${typeof coalesced3}`); // number
 // the equality operator (==) attempts to coerce operands to the same type to asses equality
 // In essence, the equality operator tests that values are the same, irrespective of their type
 // any = 5 and any = "5" will evaluate as true with ==
