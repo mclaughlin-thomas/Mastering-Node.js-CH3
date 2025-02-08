@@ -26,12 +26,30 @@ writeValue2();
 // default values can be helpful when dealing with undefined values
 //default value will be used when fcn is invoked w/o an argument
 // this means that the type of the param in the example will always be string, so I dont have to check for undefined values
-
 function writeValue3(val: string = "default value"){
     console.log(`Value: ${val}`)
 }
 writeValue3("London");
 writeValue3();
+
+// defining rest parameters
+// rest parameters are used to capture any additional arguments when
+// a fcn is invoked w additional arguments
+
+//rest parameter must be the last parameter defined by fcn.
+//its name must be prefixed with an ellipsis (...)
+// the rest parameter is an array to which any extra arguments will be assigned
+
+
+function writeValue4(val: string, ...extraInfo: string[]) {
+    console.log(`Value: ${val}, Extras: ${extraInfo}`)
+}
+writeValue4("London", "Raining", "Cold");
+writeValue4("Paris", "Sunny");
+writeValue4("New York");
+
+
+
 
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {

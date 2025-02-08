@@ -29,6 +29,18 @@ function writeValue3(val = "default value") {
 }
 writeValue3("London");
 writeValue3();
+// defining rest parameters
+// rest parameters are used to capture any additional arguments when
+// a fcn is invoked w additional arguments
+//rest parameter must be the last parameter defined by fcn.
+//its name must be prefixed with an ellipsis (...)
+// the rest parameter is an array to which any extra arguments will be assigned
+function writeValue4(val, ...extraInfo) {
+    console.log(`Value: ${val}, Extras: ${extraInfo}`);
+}
+writeValue4("London", "Raining", "Cold");
+writeValue4("Paris", "Sunny");
+writeValue4("New York");
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {
 //     let result1: string = count.toFixed(2);
