@@ -6,6 +6,16 @@ function writeValue(val) {
 }
 writeValue("London");
 writeValue(null);
+//functions are defined with the function keyword and are given a name
+// write value deines a parameter it will accept string or null values
+// by default ts will allow funcitons to be invoked only when the # of args matches the number of paramters the function defines
+// in js though a function can be called w any number of arguments
+//Optional paramter. The ? is used to denote an optional paramter
+function writeValue2(val) {
+    console.log(`Value: ${val ?? "Fallback value"}`);
+}
+writeValue2("London");
+writeValue2();
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {
 //     let result1: string = count.toFixed(2);
