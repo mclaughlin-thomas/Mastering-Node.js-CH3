@@ -14,6 +14,13 @@ let val3 = 0;
 let coalesced3 = val3 || 100; // chooses right side because 0 evaluatres as falsy like undefined or null
 console.log(`result 3: ${coalesced3}`);
 console.log(`${typeof coalesced3}`); // number
+// to fix, we can use nullishing coalescing operator (??), this addresses the issue
+// by returning the right hand operator in line 15 only if the left hand operator is null or undefined, less restrictive than
+// than ||
+coalesced3 = val3 ?? 100; // chooses right side because 0 evaluatres as falsy like undefined or null
+console.log(`result 3: ${coalesced3}`);
+console.log(`${typeof coalesced3}`); // number
+// now desirable results!
 // the equality operator (==) attempts to coerce operands to the same type to asses equality
 // In essence, the equality operator tests that values are the same, irrespective of their type
 // any = 5 and any = "5" will evaluate as true with ==
