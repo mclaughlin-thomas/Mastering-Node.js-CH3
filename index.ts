@@ -1,14 +1,21 @@
-let count: number | undefined | null = 100;
-if (count != null && count != undefined) {
-    let result1: string = count.toFixed(2);
-    console.log(`Result 1: ${result1}`);
+//defining and using functions
+function writeValue(val: string | null) {
+    console.log(`Value: ${val ?? "Fallback value"}`)
 }
-//we have to guard against undefined and null in ts
+writeValue("London");
+writeValue(null);
 
-// we can use the ? (optional chiahning operator to simplify the guarding process)
-let count2: number | undefined | null = 100;
-let result2: string | undefined = count2?.toFixed(2);
-console.log(`Result 2: ${result2}`);
+// let count: number | undefined | null = 100;
+// if (count != null && count != undefined) {
+//     let result1: string = count.toFixed(2);
+//     console.log(`Result 1: ${result1}`);
+// }
+// //we have to guard against undefined and null in ts
+
+// // we can use the ? (optional chiahning operator to simplify the guarding process)
+// let count2: number | undefined | null = 100;
+// let result2: string | undefined = count2?.toFixed(2);
+// console.log(`Result 2: ${result2}`);
 
 
 // using the null coalescing operator
