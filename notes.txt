@@ -3,4 +3,4 @@ tsc-watc1h does same thing but for ts
 
 use script for nodemon: npm run use_js
 
-continue page bottom 60
+continue page 58 objects
