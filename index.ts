@@ -70,6 +70,18 @@ function writeCity(f:() => string){ // The writeCity function defines a paramete
 }
 writeCity(getUKCapital);
 
+// ---------------
+function getUKCapital2() : string {
+    return "London";
+}
+function writeCity2(f:() => string){ // The writeCity function defines a parameter called f , which is a function that it invokes to get the value to insert into 
+                                    // the string that it writes out.
+    console.log(`City: ${f()}`)
+}
+writeCity2(getUKCapital2);
+
+writeCity2(() => "Paris");
+
 // () = >
 // this is called arrow syntax or fat arrow syntax or lambda expression syntax
 // the thing the arrow points to the the function result
