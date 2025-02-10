@@ -120,6 +120,13 @@ myArray3[2] = true;
 
 // one-liner to do same thing
 let myArray4: (number | string | boolean)[] = [100,"Adam", true];
+// ------------
+let myArray5: (number | string | boolean)[] = [100,"Adam", true];
+let val = myArray5[0];
+console.log(`Value: ${val}`);
+
+
+
 
 // () = >
 // this is called arrow syntax or fat arrow syntax or lambda expression syntax
