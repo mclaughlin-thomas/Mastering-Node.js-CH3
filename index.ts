@@ -74,13 +74,33 @@ writeCity(getUKCapital);
 function getUKCapital2() : string {
     return "London";
 }
-function writeCity2(f:() => string){ // The writeCity function defines a parameter called f , which is a function that it invokes to get the value to insert into 
-                                    // the string that it writes out.
+function writeCity2(f:() => string){ 
     console.log(`City: ${f()}`)
 }
 writeCity2(getUKCapital2);
 
 writeCity2(() => "Paris");
+
+// -------------
+//Functions can access values that are defined in the surrounding code, using a
+//feature called closure, as demonstrated in Listing 3.41.
+console.log ("closure")
+function getUKCapital3() : string {
+    return "London";
+}
+function writeCity3(f: () => string){
+    console.log(`City: ${f()}`)
+}
+writeCity3(getUKCapital3);
+writeCity3(() => "Paris");
+let myCity = "Rome";
+writeCity3(() => myCity);
+
+// -----------
+let myArray = [];
+myArray[0] = 100;
+myArray[1] = "Adam";
+myArray[2] = true;
 
 // () = >
 // this is called arrow syntax or fat arrow syntax or lambda expression syntax
