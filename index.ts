@@ -70,6 +70,11 @@ function writeCity(f:() => string){ // The writeCity function defines a paramete
 }
 writeCity(getUKCapital);
 
+// () = >
+// this is called arrow syntax or fat arrow syntax or lambda expression syntax
+// the thing the arrow points to the the function result
+
+
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {
 //     let result1: string = count.toFixed(2);
