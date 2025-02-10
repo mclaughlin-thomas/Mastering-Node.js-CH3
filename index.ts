@@ -140,8 +140,23 @@ for (let i = 0; i < myArray7.length; i++) {
     console.log("Index " + i + ": " + myArray7[i]);
 }
 console.log("XXXX");
-myArray7.forEach((value, index) => console.log("Index " + index + ": " + value));
+myArray7.forEach((value, index) =>
+    console.log("Index " + index + ": " + value));
+// -----------
+console.log("Spread Operator")
+//spread operator
+// used to expand an array so contents can be used as function arguments or comvined w other arrays
 
+let myArray10: (number | string | boolean)[] = [100,"Adam", true];
+let otherArray = [...myArray10, 200, "Bob", false];
+// spread operator is an ellipsis and it causes the arry to be unpacked
+// here, otherArray has all contents of myArray and then 200, bob and false
+// for (let i = 0; i < myArray.length; i++) {
+//console.log("Index " + i + ": " + myArray10[i]);
+// }
+// console.log("---");
+otherArray.forEach((value, index) =>
+    console.log("Index " + index + ": " + value));
 
 // () = >
 // this is called arrow syntax or fat arrow syntax or lambda expression syntax
