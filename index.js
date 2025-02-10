@@ -41,6 +41,16 @@ function writeValue4(val, ...extraInfo) {
 writeValue4("London", "Raining", "Cold");
 writeValue4("Paris", "Sunny");
 writeValue4("New York");
+// -----------
+console.log("Return");
+function composeString(val) {
+    return `Composed string: ${val}`;
+}
+function writeValue5(val) {
+    console.log(composeString(val ?? "Fallback value"));
+}
+writeValue5("London");
+writeValue5();
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {
 //     let result1: string = count.toFixed(2);

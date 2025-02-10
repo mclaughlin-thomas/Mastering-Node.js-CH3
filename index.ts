@@ -48,6 +48,16 @@ writeValue4("London", "Raining", "Cold");
 writeValue4("Paris", "Sunny");
 writeValue4("New York");
 
+// -----------
+console.log("Return")
+function composeString(val: string) : string {
+    return `Composed string: ${val}`;
+}
+function writeValue5(val?: string) {
+    console.log(composeString(val ?? "Fallback value"));
+}
+    writeValue5("London");
+    writeValue5();
 
 
 
