@@ -56,10 +56,19 @@ function composeString(val: string) : string {
 function writeValue5(val?: string) {
     console.log(composeString(val ?? "Fallback value"));
 }
-    writeValue5("London");
-    writeValue5();
+writeValue5("London");
+writeValue5();
 
+// -------------
 
+function getUKCapital() : string {
+    return "London";
+}
+function writeCity(f:() => string){ // The writeCity function defines a parameter called f , which is a function that it invokes to get the value to insert into 
+                                    // the string that it writes out.
+    console.log(`City: ${f()}`)
+}
+writeCity(getUKCapital);
 
 // let count: number | undefined | null = 100;
 // if (count != null && count != undefined) {
