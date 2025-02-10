@@ -106,6 +106,22 @@ let myArray4 = [100, "Adam", true];
 let myArray5 = [100, "Adam", true];
 let val = myArray5[0];
 console.log(`Value: ${val}`);
+// ------------
+// modigying contents of array
+let myArray6 = [100, "Adam", true];
+myArray6[0] = "Tuesday";
+let val3 = myArray[0];
+console.log(`Value: ${val3}`);
+// ---------
+//enumerating contents of an arrray. Enumerate through contents of array using for loop or
+// the forEach loop.
+console.log("enumeration");
+let myArray7 = [100, "Adam", true];
+for (let i = 0; i < myArray7.length; i++) {
+    console.log("Index " + i + ": " + myArray7[i]);
+}
+console.log("XXXX");
+myArray7.forEach((value, index) => console.log("Index " + index + ": " + value));
 // () = >
 // this is called arrow syntax or fat arrow syntax or lambda expression syntax
 // the thing the arrow points to the the function result

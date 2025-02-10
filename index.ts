@@ -131,7 +131,16 @@ let myArray6: (number | string | boolean)[] = [100,"Adam", true];
 myArray6[0] = "Tuesday";
 let val3 = myArray[0];
 console.log(`Value: ${val3}`);
-
+// ---------
+//enumerating contents of an arrray. Enumerate through contents of array using for loop or
+// the forEach loop.
+console.log ("enumeration")
+let myArray7: (number | string | boolean)[] = [100,"Adam", true];
+for (let i = 0; i < myArray7.length; i++) {
+    console.log("Index " + i + ": " + myArray7[i]);
+}
+console.log("XXXX");
+myArray7.forEach((value, index) => console.log("Index " + index + ": " + value));
 
 
 // () = >
