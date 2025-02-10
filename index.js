@@ -84,10 +84,28 @@ writeCity3(() => "Paris");
 let myCity = "Rome";
 writeCity3(() => myCity);
 // -----------
-let myArray = [];
+let myArray = []; // js arrays will resize themselves
+// dont have to declare data type it will hold either. Below we have a number, string and a boolean
 myArray[0] = 100;
 myArray[1] = "Adam";
 myArray[2] = true;
+// -- similar
+let myArray2 = [];
+myArray2[0] = 100;
+myArray2[1] = "Adam";
+myArray2[2] = true;
+// -------------
+// restricting array value types
+let myArray3 = [];
+myArray3[0] = 100;
+myArray3[1] = "Adam";
+myArray3[2] = true;
+// one-liner to do same thing
+let myArray4 = [100, "Adam", true];
+// ------------
+let myArray5 = [100, "Adam", true];
+let val = myArray5[0];
+console.log(`Value: ${val}`);
 // () = >
 // this is called arrow syntax or fat arrow syntax or lambda expression syntax
 // the thing the arrow points to the the function result

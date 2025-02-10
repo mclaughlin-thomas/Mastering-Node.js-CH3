@@ -124,7 +124,13 @@ let myArray4: (number | string | boolean)[] = [100,"Adam", true];
 let myArray5: (number | string | boolean)[] = [100,"Adam", true];
 let val = myArray5[0];
 console.log(`Value: ${val}`);
+// ------------
 
+// modigying contents of array
+let myArray6: (number | string | boolean)[] = [100,"Adam", true];
+myArray6[0] = "Tuesday";
+let val3 = myArray[0];
+console.log(`Value: ${val3}`);
 
 
 
