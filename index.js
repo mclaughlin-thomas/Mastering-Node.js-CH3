@@ -7,10 +7,14 @@ let hat = {
 };
 let boots = {
     name: "Boots",
-    price: 100
+    price: 100,
+    category: "Snow Gear"
 };
-console.log(`Name: ${hat.name}, Price: ${hat.price}`);
-console.log(`Name: ${boots.name}, Price: ${boots.price}`);
+function printDetails(product) {
+    console.log(`Name: ${product.name}, Price: ${product.price}`);
+}
+printDetails(hat);
+printDetails(boots);
 // ---------------
 //defining and using functions
 // function writeValue(val: string | null) {

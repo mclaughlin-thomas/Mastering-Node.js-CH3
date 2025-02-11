@@ -5,7 +5,8 @@ let hat = {
 };
 let boots = {
     name: "Boots",
-    price: 100
+    price: 100,
+    category: "Snow Gear"
 }
 function printDetails(product : { name: string, price: number}) { // product param can accept an object that can define a string and price
     console.log(`Name: ${product.name}, Price: ${product.price}`);
