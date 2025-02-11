@@ -10,15 +10,24 @@
 // we will use the Name and WeatherLocation classes here, which means I have
 // to use the import keyword to declare a dependency on them and the modules they come from
 
-import { Name } from "./modules/name"; // note the file extension is not included
-import { WeatherLocation } from "./modules/weather";
+// import { Name } from "./modules/name"; // note the file extension is not included
+// import { WeatherLocation } from "./modules/weather";
+// let name = new Name("Adam", "Freeman");
+// let loc = new WeatherLocation("raining", "London")
+// ;
+// console.log(name.nameMessage);
+// console.log(loc.weatherMessage);
+//when index.ts is compiled, the ts compiler detects the dependency
+//on the code in the name.ts and weather.ts files, so that pure js versions of the modules are created
+
+//consolidating module contents
+// we can now do this after making the index.ts in modules 
+import { Name, WeatherLocation } from "./modules";
 let name = new Name("Adam", "Freeman");
 let loc = new WeatherLocation("raining", "London")
 ;
 console.log(name.nameMessage);
 console.log(loc.weatherMessage);
-//when index.ts is compiled, the ts compiler detects the dependency
-//on the code in the name.ts and weather.ts files, so that pure js versions of the modules are created
 
 
 //checking object types
