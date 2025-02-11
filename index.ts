@@ -7,8 +7,11 @@ let boots = {
     name: "Boots",
     price: 100
 }
-console.log(`Name: ${hat.name}, Price: ${hat.price}`);
-console.log(`Name: ${boots.name}, Price: ${boots.price}`);
+function printDetails(product : { name: string, price: number}) { // product param can accept an object that can define a string and price
+    console.log(`Name: ${product.name}, Price: ${product.price}`);
+    }
+printDetails(hat);
+printDetails(boots);
 
 // ---------------
 //defining and using functions
