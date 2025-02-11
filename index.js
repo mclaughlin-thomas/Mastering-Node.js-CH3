@@ -16,6 +16,8 @@ class Product {
     name;
     price;
     category;
+    // adding one of the access control keywords to a constructor parameter has the 
+    // effect of creating a property with the same name, type and level access.
     constructor(name, price, category) {
         this.name = name;
         this.price = price;
@@ -36,7 +38,16 @@ class Product {
         }
     }
 }
-let hat = new Product("Hat", 100); // new keyword used to creaet an object from a class
+// extends keyword is used to declare the class that will be inherited from, 
+// known as the superclass or base class
+class DiscountProduct extends Product {
+    discount;
+    constructor(name, price, discount) {
+        super(name, price - discount); // super keyword is used to invoke the superclass's construcor and methods
+        this.discount = discount;
+    }
+}
+let hat = new DiscountProduct("Hat", 100, 10); // new keyword used to creaet an object from a class
 let boots = new Product("Boots", 100, "Snow Gear");
 // function printDetails(product : { name: string, price: number, category?: string}) {
 //     if (product.category != undefined) {
