@@ -1,25 +1,38 @@
-// Classes
-// Classes are templates used to create objects
-// providing an alternative to the literal syntax
-class Product {
-    constructor(name: string, price: number, category?: string) {
-        this.name = name;
-        this.price = price;
-        this.category = category;
-    }
-    //constructor fcn invoked when a new object is created
-    name: string
-    price: number
-    category?: string
+//Access controls and simplified constructors
+//ts provides support for access controls using the public, private, and protected keywords
+// public, gives unrestricted access to the properties and methods defined by a class
+// meaning they can be accessed by any other part of the application
 
+//private, restricts access to features so they can be accessed only within the class
+// that defines them
+
+//protected, restricts access so that features can be accessed within the class or a subclass
+
+// by default, features defined by class are accessible by any part of the application
+// as if the public keyword has been applied
+
+//"You won’t see the access control keywords applied to methods and
+// properties in this book because access controls are not essential in a web application."
+
+
+// "allows classes to be simplified by applying the access control keyword to the constructor parameters, as shown"
+
+class Product {
+    constructor(public name: string, public price:number,public category?: string) {
+        // this.name = name;
+        // this.price = price;
+        // this.category = category;
+    }
+    // name: string
+    // price: number
+    // category?: string
     printDetails() {
         if (this.category != undefined) {
             console.log(`Name: ${this.name}, Price: ${this.price}, `+ `Category: ${this.category}`);
         } else {
-            console.log(`Name: ${this.name}, Price: ${this.price}`);
+        console.log(`Name: ${this.name}, Price: ${this.price}`);
         }
     }
-    
 }
 let hat = new Product("Hat", 100); // new keyword used to creaet an object from a class
 let boots = new Product("Boots", 100, "Snow Gear");
