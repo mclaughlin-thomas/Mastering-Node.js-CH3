@@ -1,24 +1,54 @@
-//Working with objects
-let hat = {
-    name: "Hat",
-    price: 100
-};
-let boots = {
-    name: "Boots",
-    price: 100,
-    category: "Snow Gear"
+// Classes
+// Classes are templates used to create objects
+// providing an alternative to the literal syntax
+class Product {
+    constructor(name: string, price: number, category?: string) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+    //constructor fcn invoked when a new object is created
+    name: string
+    price: number
+    category?: string
 }
+let hat = new Product("Hat", 100); // new keyword used to creaet an object from a class
+let boots = new Product("Boots", 100, "Snow Gear");
 
-function printDetails(product : { name: string, price: number,category?: string}) { // type of category is string or undefined
+function printDetails(product : { name: string, price: number, category?: string}) {
     if (product.category != undefined) {
-        console.log(`Name: ${product.name}, Price: ${product.price}, `+ `Category: ${product.category}`);
+        console.log(`Name: ${product.name}, Price:${product.price}, `+ `Category: ${product.category}`);
     } else {
-        console.log(`Name: ${product.name}, Price: ${product.price}`);
+        console.log(`Name: ${product.name}, Price:${product.price}`);
     }
 }
-
 printDetails(hat);
 printDetails(boots);
+
+
+
+// -----------------
+//Working with objects
+// let hat = {
+//     name: "Hat",
+//     price: 100
+// };
+// let boots = {
+//     name: "Boots",
+//     price: 100,
+//     category: "Snow Gear"
+// }
+
+// function printDetails(product : { name: string, price: number,category?: string}) { // type of category is string or undefined
+//     if (product.category != undefined) {
+//         console.log(`Name: ${product.name}, Price: ${product.price}, `+ `Category: ${product.category}`);
+//     } else {
+//         console.log(`Name: ${product.name}, Price: ${product.price}`);
+//     }
+// }
+
+// printDetails(hat);
+// printDetails(boots);
 
 // ---------------
 //defining and using functions
