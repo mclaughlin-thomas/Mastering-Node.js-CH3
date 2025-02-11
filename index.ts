@@ -1,3 +1,9 @@
+//checking object types
+// when applied to an object, the typeof function will return object
+// To determine whether an object has been derived from a class, the instanceof keyword can be used
+
+
+
 //Access controls and simplified constructors
 //ts provides support for access controls using the public, private, and protected keywords
 // public, gives unrestricted access to the properties and methods defined by a class
@@ -54,9 +60,16 @@ let boots = new Product("Boots", 100, "Snow Gear");
 //         console.log(`Name: ${product.name}, Price:${product.price}`);
 //     }
 // }
-hat.printDetails();
-boots.printDetails();
+// hat.printDetails();
+// boots.printDetails();
 
+//instanceof keyword is used with an object value and a class
+// the expression returns true if the object was created from the class or a superclass
+
+console.log(`Hat is a Product? ${hat instanceof Product}`);
+console.log(`Hat is a DiscountProduct? ${hat instanceof DiscountProduct}`);
+console.log(`Boots is a Product? ${boots instanceof Product}`);
+console.log("Boots is a DiscountProduct? "+ (boots instanceof DiscountProduct));
 
 
 // -----------------

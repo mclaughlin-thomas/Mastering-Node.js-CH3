@@ -1,9 +1,12 @@
 "use strict";
+//checking object types
+// when applied to an object, the typeof function will return object
+// To determine whether an object has been derived from a class, the instanceof keyword can be used
+Object.defineProperty(exports, "__esModule", { value: true });
 //Access controls and simplified constructors
 //ts provides support for access controls using the public, private, and protected keywords
 // public, gives unrestricted access to the properties and methods defined by a class
 // meaning they can be accessed by any other part of the application
-Object.defineProperty(exports, "__esModule", { value: true });
 //private, restricts access to features so they can be accessed only within the class
 // that defines them
 //protected, restricts access so that features can be accessed within the class or a subclass
@@ -56,8 +59,12 @@ let boots = new Product("Boots", 100, "Snow Gear");
 //         console.log(`Name: ${product.name}, Price:${product.price}`);
 //     }
 // }
-hat.printDetails();
-boots.printDetails();
+// hat.printDetails();
+// boots.printDetails();
+console.log(`Hat is a Product? ${hat instanceof Product}`);
+console.log(`Hat is a DiscountProduct? ${hat instanceof DiscountProduct}`);
+console.log(`Boots is a Product? ${boots instanceof Product}`);
+console.log("Boots is a DiscountProduct? " + (boots instanceof DiscountProduct));
 // -----------------
 //Working with objects
 // let hat = {
