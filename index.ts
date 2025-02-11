@@ -1,7 +1,25 @@
+// woirking with js modules
+
+// "JavaScript modules are used to break up an application into separate files. At
+// runtime, the dependencies between modules are resolved, the files containing
+// the modules are loaded, and the code they contain is executed."
+
+// every ts and js file added to a project is treated as a module
+
+//import keyword is used to declare a dependency on the features that a module provides
+// we will use the Name and WeatherLocation classes here, which means I have
+// to use the import keyword to declare a dependency on them and the modules they come from
+
+import { Name } from "./modules/name";
+import { WeatherLocation } from "./modules/weather";
+let name = new Name("Adam", "Freeman");
+let loc = new WeatherLocation("raining", "London")
+;
+console.log(name.nameMessage);
+console.log(loc.weatherMessage);
 //checking object types
 // when applied to an object, the typeof function will return object
 // To determine whether an object has been derived from a class, the instanceof keyword can be used
-
 
 
 //Access controls and simplified constructors
