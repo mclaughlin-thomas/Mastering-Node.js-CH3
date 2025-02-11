@@ -9,7 +9,7 @@ let boots = {
     category: "Snow Gear"
 }
 
-function printDetails(product : { name: string, price: number,category?: string}) {
+function printDetails(product : { name: string, price: number,category?: string}) { // type of category is string or undefined
     if (product.category != undefined) {
         console.log(`Name: ${product.name}, Price: ${product.price}, `+ `Category: ${product.category}`);
     } else {
