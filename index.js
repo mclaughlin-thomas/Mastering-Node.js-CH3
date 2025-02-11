@@ -11,7 +11,12 @@ let boots = {
     category: "Snow Gear"
 };
 function printDetails(product) {
-    console.log(`Name: ${product.name}, Price: ${product.price}`);
+    if (product.category != undefined) {
+        console.log(`Name: ${product.name}, Price: ${product.price}, ` + `Category: ${product.category}`);
+    }
+    else {
+        console.log(`Name: ${product.name}, Price: ${product.price}`);
+    }
 }
 printDetails(hat);
 printDetails(boots);
